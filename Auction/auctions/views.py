@@ -15,6 +15,7 @@ def index(request):
     return render(request, "auctions/index.html", {
         "auctions": Auction.objects.filter(closed=False).order_by('-creation_date')
     })
+  
 
 
 def login_view(request):
@@ -516,7 +517,8 @@ def removeWatchlist(request, auction_id):
             "message": "The GET method is not allowed."
         })
 
-
+def user(request):
+    return render(request,"auctions/user.html")  
 
 
 
