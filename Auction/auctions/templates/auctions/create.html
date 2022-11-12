@@ -10,8 +10,8 @@
     <form action="{% url 'create' %}" method="post">
         {% csrf_token %}
         <div class="container py-3">
-            <h2>Create a auction list</h2>
-            <p>Please fill the form to create a auction list.</p>
+            <h2>Start an auction</h2>
+            <p>Please fill the form to start an auction.</p>
             
             {% for field in form %}
             <div class="form-group row">
